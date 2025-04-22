@@ -2,7 +2,7 @@ FROM eclipse-temurin:21-alpine
 MAINTAINER John Paul Alcala jp@jpalcala.com
 
 # grab gosu for easy step-down from root
-RUN apk add curl rsync tmux 
+RUN apk add curl rsync tmux \
     && apk add gosu --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing
     # && apt-get update && apt-get install -y curl rsync tmux && rm -rf /var/lib/apt/lists/* \
     # && curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/download/1.17/gosu-$(dpkg --print-architecture)" \
