@@ -11,9 +11,13 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
+      packages: write
     steps:
         - uses: actions/checkout@v4
+          with:
+            persist-credentials: false
         # Install the cosign tool except on PR
         # https://github.com/sigstore/cosign-installer
         - name: Install cosign
