@@ -11,8 +11,8 @@ RUN apk add curl rsync tmux \
     # && rm /usr/local/bin/gosu.asc \
     # && chmod +x /usr/local/bin/gosu
 
-RUN groupadd -g 1000 minecraft && \
-    useradd -g minecraft -u 1000 -r -M minecraft && \
+RUN addgroup -g 1000 minecraft && \
+    adduser  -G minecraft -u 1000 -D -S minecraft && \
     touch /run/first_time && \
     mkdir -p /opt/minecraft /var/lib/minecraft /usr/src/minecraft && \
     echo "set -g status off" > /root/.tmux.conf
