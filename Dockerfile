@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-alpine
+FROM eclipse-temurin:25-alpine
 MAINTAINER John Paul Alcala jp@jpalcala.com
 
 # grab gosu for easy step-down from root
